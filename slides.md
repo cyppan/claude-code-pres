@@ -41,6 +41,10 @@ Like messaging a senior engineer on Slack.
 
 **Key shift:** Deep search + agentic loop — runs `grep`, `ls`, reads files, plans, executes.
 
+<!--
+no autocomplete
+-->
+
 ---
 
 # Coding Agent Benchmarks
@@ -54,6 +58,24 @@ layout: section
 # Demo
 
 Fresh Slidev repo + CLAUDE.md setup
+
+<!--
+explain the repo, what is slidev and how I’ll progressively improve the CC setup on it
+- how to see my slide? wrong package manager expected
+- make it launch as background process in bash
+- fail because of stdin expected    
+  - make it investigate on web
+  - tail -f /dev/null | pnpm exec slidev —port 3030 &
+  - The trick was using tail -f /dev/null | to keep stdin open so Slidev doesn't exit.
+- time for a /init, it will take more time to investigate the current setup and do less guesses next time, saving time and tokens (it can focus on the actual task)
+- Ok nice, now I want us to rewrite the slides for my real presentation, Je veux créer une présentation sur l'utilisation de l'IA pour le code avec Claude Code. Le titre serait "AI augmented coding with Claude Code", genere uniquement 3 slides pour l'instant
+  - => fichier tab courant injecte dans le contexte automatiquement
+  - mentionner combien CC est bon pour utiliser les commandes unix, grep par exemple et naviguer dans le systeme de fichier, aucun fichier n’est “indexe” avec CC, contrairement a Cursor par exemple
+  - possibilite d’utiliser @ pour preciser des fichiers
+  - feedback dans l’IDE directement avec le diff
+- faire voir les slides generes
+- experimentation: “on passe en mode ASCII, play the slides”
+-->
 
 ---
 transition: fade-out
@@ -116,8 +138,6 @@ Real-life examples:
 show ODC Mongo skill odc/blob/main/.claude/skills/mongodb/SKILL.md
 
 Mongo pipeline investigation odc/pull/24249
-
-Cursor for Playwright investigation (Cursor)
 -->
 
 ---
@@ -133,9 +153,8 @@ transition: fade-out
 - Errors fed back to Claude automatically
 
 <!--
-show sapionote2/blob/main/CLAUDE.md#important-notes
-
-Example of playwright skill
+- show sapionote2/blob/main/CLAUDE.md#important-notes
+- Example of playwright skill odc/pull/24389/files#diff-4ac5d50bcf457cffeaef971a45c17e1342f42bbc1c2f7004a732cff63db6f1e3
 -->
 
 ---
@@ -161,6 +180,7 @@ sapionote2/blob/main/.claude/settings.json
 -->
 
 ---
+layout: two-cols
 transition: fade-out
 ---
 
@@ -172,6 +192,18 @@ transition: fade-out
 - **Browser MCP**: Navigate and interact with web apps
 - **GitHub MCP**: Pull PR comments directly
 - **Support & Monitoring MCPs**: Notion, Sentry, ...
+
+::right::
+
+<img src="/get-diagnostics-ide-mcp.png" class="w-full mt-8 ml-8"/>
+
+<!--
+show /mcp, ask to run a getDiagnostics
+
+demo of chrome MCP in sapionote2:
+can you run the app and try to login into the dashboard to ensure it's working? Show 
+me your progression with ASCII representation of pages
+-->
 
 ---
 transition: fade-out
@@ -223,8 +255,8 @@ transition: fade-out
 - Opus 4.5 is **more efficient**: 48-76% fewer tokens than Sonnet for same tasks
 
 <!--
-/usage to check current usage
-API: Opus $5/$25 per MTok, Sonnet $3/$15 per MTok
+- /usage to check current usage
+- API: Opus $5/$25 per MTok, Sonnet $3/$15 per MTok
 -->
 
 ---
@@ -249,8 +281,8 @@ transition: fade-out
 - New skills: prompting, verification, orchestration, technology watch, tooling, decision making, ...
 
 <!--
-reviewing becomes a blocker
-build vs buy arguments changed
-not only devs are impacted
-/output-style Learning
+- reviewing becomes a blocker
+- build vs buy arguments changed
+- not only devs are impacted
+- /output-style Learning
 -->
