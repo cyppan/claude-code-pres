@@ -244,11 +244,13 @@ transition: fade-out
 # Transformation of the SWE Role
 
 - From writing code to orchestrating AI
-- Architecture and review become critical
+- Architecture (before) and review (after) become critical
 - Higher leverage, faster iteration
-- New skills: prompting, verification, orchestration, technology watch, tooling, decision making
+- New skills: prompting, verification, orchestration, technology watch, tooling, decision making, ...
 
 <!--
-reviewing becomes a blocker for innovation
-build vs buy
+reviewing becomes a blocker
+build vs buy arguments changed
+not only devs are impacted
+/output-style Learning
 -->

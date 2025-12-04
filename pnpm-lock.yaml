@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@slidev/cli':
     specifier: ^52.10.1
-    version: 52.10.1(@types/markdown-it@14.1.2)(postcss@8.5.6)
+    version: 52.10.1(@types/markdown-it@14.1.2)(playwright-chromium@1.57.0)(postcss@8.5.6)
   '@slidev/theme-bricks':
     specifier: ^0.25.0
     version: 0.25.0
@@ -26,6 +26,11 @@ dependencies:
   vue:
     specifier: ^3.5.25
     version: 3.5.25(typescript@5.9.3)
+
+devDependencies:
+  playwright-chromium:
+    specifier: ^1.57.0
+    version: 1.57.0
 
 packages:
 
@@ -1863,7 +1868,7 @@ packages:
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
     dev: false
 
-  /@slidev/cli@52.10.1(@types/markdown-it@14.1.2)(postcss@8.5.6):
+  /@slidev/cli@52.10.1(@types/markdown-it@14.1.2)(playwright-chromium@1.57.0)(postcss@8.5.6):
     resolution: {integrity: sha512-rL5PLc3PsMUzURtccvIkBFENQTXZyPsFqTkyDn5XQbIm4t3LuwiYCFPQfL0p6Y/izQeoG4a5f7e+8WIP8m8C5w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -1915,6 +1920,7 @@ packages:
       pdf-lib: 1.17.1
       picomatch: 4.0.3
       plantuml-encoder: 1.4.0
+      playwright-chromium: 1.57.0
       postcss-nested: 7.0.2(postcss@8.5.6)
       pptxgenjs: 4.0.1
       prompts: 2.4.2
@@ -5551,6 +5557,19 @@ packages:
   /plantuml-encoder@1.4.0:
     resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
     dev: false
+
+  /playwright-chromium@1.57.0:
+    resolution: {integrity: sha512-GCVVTbmIDrZuBxWYoQ70rehRXMb3Q7ccENe63a+rGTWwypeVAgh/DD5o5QQ898oer5pdIv3vGINUlEkHtOZQEw==}
+    engines: {node: '>=18'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.57.0
+
+  /playwright-core@1.57.0:
+    resolution: {integrity: sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   /points-on-curve@0.2.0:
     resolution: {integrity: sha512-0mYKnYYe9ZcqMCWhUjItv/oHjvgEsfKvnUTg8sAtnHr3GVy7rGkXCb6d5cSyqrWqL4k81b9CPg3urd+T7aop3A==}
